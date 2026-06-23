@@ -6,77 +6,63 @@
     <title>โปรไฟล์ - ศุภณัฐ บุญศิริ</title>
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Kanit';
         }
 
         body {
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            min-height: 100vh;
+            background-color: #f4f7f6;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             padding: 20px;
         }
 
         .profile-card {
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             max-width: 450px;
+            width: 100%;
             padding: 30px;
             text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .profile-img-container {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid #4a90e2;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border-top: 8px solid #0056b3;
         }
 
         .profile-img {
-            width: 100%;
-            height: 100%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             object-fit: cover;
+            border: 4px solid #eef2f3;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .name {
+            font-size: 24px;
+            color: #333333;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .nickname {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 15px;
         }
 
         .student-id {
             display: inline-block;
-            background: #4a90e2;
-            color: #ffffff;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .name {
-            font-size: 1.6rem;
-            color: #333333;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .nickname {
-            font-size: 1.1rem;
-            color: #666666;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
             margin-bottom: 25px;
         }
 
@@ -87,30 +73,30 @@
         }
 
         .info-item {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: flex;
-            flex-direction: column;
-        }
-
-        .info-label {
-            font-size: 0.85rem;
-            color: #999999;
-            text-transform: uppercase;
-            margin-bottom: 2px;
-            font-weight: 600;
-        }
-
-        .info-value {
-            font-size: 1.05rem;
+            align-items: flex-start;
+            font-size: 15px;
             color: #444444;
         }
 
-        .university-tag {
-            margin-top: 25px;
-            font-size: 0.9rem;
-            color: #777777;
-            font-weight: 500;
-            border-top: 1px dashed #dddddd;
+        .info-label {
+            font-weight: bold;
+            color: #555555;
+            min-width: 100px;
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            color: #222222;
+        }
+
+        .university {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #888888;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
             padding-top: 15px;
         }
     </style>
@@ -118,5 +104,35 @@
 <body>
 
     <div class="profile-card">
-        <div class="profile-img-container">
-            <img class="profile-img" src="image/jpeg;base64,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
+        <img src="ใส่ลิงก์ตรงของรูปภาพที่นี่" alt="รูปโปรไฟล์" class="profile-img" onerror="this.src='https://via.placeholder.com/150?text=Profile+Image'">
+        
+        <div class="name">ศุภณัฐ บุญศิริ</div>
+        <div class="nickname">ชื่อเล่น: แน็ค</div>
+        <div class="student-id">รหัสนักศึกษา: 694245013</div>
+
+        <div class="info-section">
+            <div class="info-item">
+                <span class="info-label">สาขาวิชา:</span>
+                <span class="info-value">วิทยาการคอมพิวเตอร์</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">คณะ:</span>
+                <span class="info-value">วิทยาศาสตร์และเทคโนโลยี</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">เบอร์โทรศัพท์:</span>
+                <span class="info-value">099-0133950</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">อีเมล:</span>
+                <span class="info-value"><a href="mailto:694245013@mcru.ac.th" style="color: #0056b3; text-decoration: none;">694245013@mcru.ac.th</a></span>
+            </div>
+        </div>
+
+        <div class="university">
+            มหาวิทยาลัยราชภัฏหมู่บ้านจอมบึง
+        </div>
+    </div>
+
+</body>
+</html>
